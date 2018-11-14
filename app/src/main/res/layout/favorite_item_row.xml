@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_white_border"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/saleImage"
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_1"
+                app:siRadius="5dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/imageLayout"
+            android:layout_toStartOf="@+id/heartLayout">
+
+            <RelativeLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/priceSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:text="@string/doller_sign"
+                    android:textColor="@color/colorHead"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/priceSign"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:text="@string/_230"
+                    android:textColor="@color/colorHead"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/orderNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceLayout"
+                android:fontFamily="@font/cairo_light"
+                android:text="@string/order_name"
+                android:textColor="#394a5f"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderNameTxt"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/date_example"
+                android:textColor="#778d9c"
+                android:textSize="8sp"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/heartLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_gardian_radius"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ic_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_favorite" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

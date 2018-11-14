@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DoneActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/tail_left" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo_color" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/cartLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circle_gardian">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_cart" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="110dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cartLayout"
+            android:background="@drawable/bg_gardian" />
+
+        <RelativeLayout
+            android:id="@+id/addressLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/view"
+            android:background="@drawable/bg_circle_gardian">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_address" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="110dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/addressLayout"
+            android:background="@drawable/bg_gardian" />
+
+        <RelativeLayout
+            android:id="@+id/doneLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/view1"
+            android:background="@drawable/bg_circle_gardian">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_done" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp">
+
+            <RelativeLayout
+                android:id="@+id/sellerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_gray_border">
+
+                <RelativeLayout
+                    android:id="@+id/nameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/sellerTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/seller"
+                        android:textColor="@color/colorTxt"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/storeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sellerTxt"
+                        android:fontFamily="@font/cairo_light"
+                        android:text="Canshop Online Store"
+                        android:textColor="@color/colorHead"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/storeName"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="www.canshop.net"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/nameLayout"
+                    android:background="@color/colorBorder" />
+
+                <RelativeLayout
+                    android:id="@+id/contactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLine"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/mobileTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="66625007"
+                        android:textColor="@color/colorTxt"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mobileTxt"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="Hawally-Block 4 - street 129 - Ali Yousef Ali Elmatrook Complex - Office No-7"
+                        android:textColor="@color/colorTxt"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buyerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sellerLayout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_white_gray_border"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/buyerTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_light"
+                    android:text="kareem ahmed"
+                    android:textColor="@color/colorHead"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/buyerAddressTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buyerTxt"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="Road Desert cairo alexandria km - alexandria"
+                    android:textColor="@color/colorHead"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/buyerMobileTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buyerAddressTxt"
+                    android:fontFamily="@font/cairo_regular"
+                    android:text="01288188828"
+                    android:textColor="@color/colorHead"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/invoiceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buyerMobileTxt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/invoiceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/cairo_light"
+                        android:text="Proforma Invoice"
+                        android:textColor="@color/colorHead"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/invoiceNoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/cairo_light"
+                        android:text="14839"
+                        android:textColor="@color/colorHead"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/invoiceLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/invoice_date"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="6/26/2018"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/amountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/order_amount_kwd"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/amountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="18.70"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buyerLayout" />
+
+            <RelativeLayout
+                android:id="@+id/totalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerView"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_border"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/deliveryLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/delaviryTrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/delivery_price"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/priceTxt_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@+id/priceSign"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/_1"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/priceSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/doller_sign"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deliveryLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/cairo_regular"
+                        android:text="@string/total_price"
+                        android:textColor="@color/colorHead"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/priceLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="RelativeOverlap">
+
+                        <TextView
+                            android:id="@+id/priceTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cairo_regular"
+                            android:text="@string/_230"
+                            android:textColor="@color/colorHead"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/nextButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalLayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_btn_gardian"
+                android:fontFamily="@font/cairo_light"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

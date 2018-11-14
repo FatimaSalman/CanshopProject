@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_white_gray_border"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/productLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/pTxt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/product"
+                android:textColor="@color/colorHead"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/pTxt"
+                android:background="@color/colorBorder" />
+
+            <TextView
+                android:id="@+id/productTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/view"
+                android:fontFamily="@font/cairo_regular"
+                android:text="2345 - COLLAGEN - C 60CT CAP"
+                android:textColor="#394a5f"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/productLayout"
+            android:background="@color/colorBorder" />
+
+        <RelativeLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/prTxt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/price"
+                android:textColor="@color/colorHead"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/prTxt"
+                android:background="@color/colorBorder" />
+
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/view2"
+                android:fontFamily="@font/cairo_regular"
+                android:text="2345 - COLLAGEN - C 60CT CAP"
+                android:textColor="#394a5f"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/priceLayout"
+            android:background="@color/colorBorder" />
+
+        <RelativeLayout
+            android:id="@+id/quantityLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/qTxt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/quantity"
+                android:textColor="@color/colorHead"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/qTxt"
+                android:background="@color/colorBorder" />
+
+            <TextView
+                android:id="@+id/quantityTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/view4"
+                android:fontFamily="@font/cairo_regular"
+                android:text="2345 - COLLAGEN - C 60CT CAP"
+                android:textColor="#394a5f"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/quantityLayout"
+            android:background="@color/colorBorder" />
+
+        <RelativeLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view5"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tTxt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/line_total"
+                android:textColor="@color/colorHead"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/tTxt"
+                android:background="@color/colorBorder" />
+
+            <TextView
+                android:id="@+id/totalTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/view6"
+                android:fontFamily="@font/cairo_regular"
+                android:text="2345 - COLLAGEN - C 60CT CAP"
+                android:textColor="#394a5f"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

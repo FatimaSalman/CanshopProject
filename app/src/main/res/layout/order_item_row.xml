@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_white_border"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/saleImage"
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_1"
+                app:siBorderColor="@color/colorGray"
+                app:siBorderWidth="0.3dp"
+                app:siRadius="5dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/imageLayout"
+            android:layout_toStartOf="@+id/statusTxt">
+
+            <RelativeLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/priceSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:text="@string/order_number"
+                    android:textColor="@color/colorHead"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/orderTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/priceSign"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:text="@string/_230"
+                    android:textColor="@color/colorHead"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/orderNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceLayout"
+                android:fontFamily="@font/cairo_light"
+                android:text="@string/order_name"
+                android:textColor="#394a5f"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderNameTxt"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:text="@string/date_example"
+                android:textColor="@color/colorHead"
+                android:textSize="16sp"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/statusTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_gardian_radius"
+            android:fontFamily="@font/cairo_regular"
+            android:padding="10dp"
+            android:text="Pending"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

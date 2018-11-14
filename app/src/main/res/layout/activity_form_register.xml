@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/accountImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/account_img" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accountImage"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logo"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:baselineAligned="false"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/signUpLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/signUpTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorHead"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="63dp"
+                    android:layout_height="4dp"
+                    android:layout_below="@+id/signUpTxt"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_gardian" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SignInLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/signUpLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/signInTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="63dp"
+                    android:layout_height="4dp"
+                    android:layout_below="@+id/signInTxt"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_gardian" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tabLayout"
+            android:background="@color/colorView" />
+
+        <FrameLayout
+            android:id="@+id/fragmentReplace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view" />
+
+    </RelativeLayout>
+</RelativeLayout>

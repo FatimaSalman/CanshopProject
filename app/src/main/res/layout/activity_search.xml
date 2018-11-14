@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/tail_left" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo_color" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/searchForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_white_border">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/searchIcon"
+            android:background="@null"
+            android:fontFamily="@font/cairo_regular"
+            android:hint="@string/write_here"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#A8A8A8"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/salesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchForm"
+        android:layout_marginStart="10dp" />
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/categorySearch"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/searchEditText"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:background="@drawable/bg_white_border"-->
+    <!--android:padding="10dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/categoryList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:fontFamily="@font/cairo_regular"-->
+    <!--android:text="@string/category"-->
+    <!--android:textColor="#a8a8a8"-->
+    <!--android:textSize="12sp"-->
+    <!--tools:ignore="RelativeOverlap" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/arrowDown"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:contentDescription="@string/app_name"-->
+    <!--android:src="@drawable/ic_arrow_down" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/categoryLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/categoryList">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:fontFamily="@font/cairo_light"-->
+    <!--android:text="Accessories - Womem"-->
+    <!--android:textColor="@color/colorHead"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ic_check"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:contentDescription="@string/app_name"-->
+    <!--android:scaleType="fitCenter"-->
+    <!--android:src="@drawable/ic_check" />-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/priceSearch"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/categorySearch"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@drawable/bg_white_border"-->
+    <!--android:padding="10dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/priceList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/pTxt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:fontFamily="@font/cairo_regular"-->
+    <!--android:text="@string/price"-->
+    <!--android:textColor="#a8a8a8"-->
+    <!--android:textSize="12sp"-->
+    <!--tools:ignore="RelativeOverlap" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/arrowDown1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:contentDescription="@string/app_name"-->
+    <!--android:src="@drawable/ic_arrow_down" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/priceLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/priceList">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/amountLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/startPrice"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:fontFamily="@font/cairo_semi_bold"-->
+    <!--android:text="$ 50"-->
+    <!--android:textColor="@color/colorHead"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/endPrice"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:fontFamily="@font/cairo_semi_bold"-->
+    <!--android:text="$ 320"-->
+    <!--android:textColor="@color/colorHead"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/seekLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/amountLayout">-->
+
+    <!--<com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar-->
+    <!--android:id="@+id/rangeSeekbar"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--rsb:absoluteMaxValue="100"-->
+    <!--rsb:absoluteMinValue="0" />-->
+
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+</RelativeLayout>

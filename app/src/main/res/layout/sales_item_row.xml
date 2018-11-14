@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_white_border"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/saleImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_1"
+                app:siBorderColor="@color/colorGray"
+                app:siBorderWidth="0.3dp"
+                app:siRadius="5dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/outImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/out_of_stage" />
+
+        <RelativeLayout
+            android:id="@+id/detailsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:gravity="center"
+                android:text="@string/_320"
+                android:textColor="@color/colorHead"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/salesNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceTxt"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/cairo_light"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/sales_name"
+                android:textColor="@color/colorHead"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/typeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/salesNameTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/cairo_light"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/sale_type"
+                android:textColor="@color/colorHead"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

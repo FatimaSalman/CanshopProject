@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.AddressActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/tail_left" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo_color" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/cartLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circle_gardian">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_cart" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="110dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cartLayout"
+            android:background="@drawable/bg_gardian" />
+
+        <RelativeLayout
+            android:id="@+id/addressLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/view"
+            android:background="@drawable/bg_circle_gardian">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_address" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="110dp"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/addressLayout"
+            android:background="@drawable/bg_gardian" />
+
+        <RelativeLayout
+            android:id="@+id/doneLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/view1"
+            android:background="@drawable/bg_circle_gray">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_done" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/addressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/address"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+
+
+            <RelativeLayout
+                android:id="@+id/addressLayout_"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addressTitle"
+                android:layout_marginTop="5dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/firstNameWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/firstNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_user"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/first_name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lastNameWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstNameWrapper">
+
+                    <EditText
+                        android:id="@+id/lastNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_user"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/last_name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/companyWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lastNameWrapper"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/companyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/company"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/emailWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/companyWrapper">
+
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/phoneWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emailWrapper">
+
+                    <EditText
+                        android:id="@+id/phoneEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/addressFirstWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phoneWrapper">
+
+                    <EditText
+                        android:id="@+id/addressFirstEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/address_1"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/addressSecondWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addressFirstWrapper"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/addressSecondEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/address_2"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cityWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addressSecondWrapper">
+
+                    <EditText
+                        android:id="@+id/cityEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/stateWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cityWrapper"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/stateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/state"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/postCodeWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stateWrapper"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/postCodeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/postcode"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/countryWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/postCodeWrapper">
+
+                    <EditText
+                        android:id="@+id/countryEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_earth"
+                        android:fontFamily="@font/cairo_regular"
+                        android:hint="@string/country"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/nextButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressLayout_"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_gardian"
+                android:fontFamily="@font/cairo_light"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
